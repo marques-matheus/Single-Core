@@ -3,19 +3,10 @@ import Image from "next/image";
 import Header from "./Organisms/Header";
 import Banner from "./Organisms/Header/Banner";
 import ServiceSection from "./Organisms/ServiceSection";
-import { useState } from "react";
+import CardSuporte from "./Cells/cardSuporte";
+import Heading from "./Atoms/heading";
 export default function Home() {
-  const [cards, setCards] = useState([
-    { isOpen: false, descricao: "Descrição 1" },
-    { isOpen: false, descricao: "Descrição 2" },
-    { isOpen: false, descricao: "Descrição 3" },
-  ]);
 
-  const setIsOpen = (index: number, isOpen: boolean) => {
-    setCards((prevCards) =>
-      prevCards.map((card, i) => (i === index ? { ...card, isOpen } : card))
-    );
-  };
   return (
     <>
       <Header />
@@ -30,24 +21,14 @@ export default function Home() {
           </article>
         </main>
       </Banner>
-      <ServiceSection />
-      <div className="flex w-4/6 m-auto relative">
-        <div className="flex w-4/6 m-auto relative">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className={`w-1/2 relative w-32 bg-slate-600 h-32 hover:w-full transition-all duration-300 ${card.isOpen ? "w-full" : "w-32"
-                }`}
-              onMouseOver={() => setIsOpen(index, true)}
-              onMouseOut={() => setIsOpen(index, false)}
-            >
-              <h1>teste</h1>
-              <p className={`${card.isOpen ? "block" : "hidden"}`}>{card.descricao}</p>
-            </div>
-          ))}
-        </div>
+
+      <div className="flex w-full flex-col box-content">
+        <Heading text="Suporte Profissional" align="text-center" />
+        <CardSuporte />
 
       </div>
+      <ServiceSection />
+
     </>
 
   );
