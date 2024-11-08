@@ -17,7 +17,6 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #15336C;
   
 }
 
@@ -26,7 +25,7 @@ body {
 }
 
 
-#home {
+.banner {
   background-image: url("/mask.png");
   background-repeat: no-repeat;
   background-size: cover;
