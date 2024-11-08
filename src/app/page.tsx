@@ -3,6 +3,7 @@ import Header from "./Organisms/Header";
 import Banner from "./Organisms/Header/Banner";
 import Heading from "./Atoms/heading";
 import ServiceCard from "./Cells/ServiceCard";
+import ServiceSection from "./Organisms/ServiceSection";
 export default function Home() {
   return (
     <>
@@ -18,8 +19,7 @@ export default function Home() {
           </article>
         </main>
       </Banner>
-      <Heading text="Nossos profissionais estão capacitados para solucionar o seu problema." textSub="Serviços" align="text-center" />
-      <ServiceCard />
+      <ServiceSection />
     </>
 
   );
