@@ -1,8 +1,11 @@
 
-const Heading = ({ text, h, align }: { text: string, h: number, align?: string }) => {
+const Heading = ({ text, textSub, align }: { text: string, textSub?: string, align?: string }) => {
     return (
-        <h2 className={`text-3xl font-bold ${align}`}>{text}</h2> 
-               
+        <div className="flex flex-col my-5 space-y-4 items-center justify-center ">
+            <sub className={`text-cyan-900 font-semibold text-lg ${align}`}>{textSub}</sub>
+            <h2 className={`text-xl font-bold max-w-sm ${align}`}>{text}</h2>
+        </div>
+
     )
 }
 
