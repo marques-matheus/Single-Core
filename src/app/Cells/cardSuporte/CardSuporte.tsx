@@ -6,8 +6,15 @@ import EngineeringOutlinedIcon from '@mui/icons-material/EngineeringOutlined';
 const CardSuporte = () => {
     const [cards, setCards] = useState([
         { isOpen: false, descricao: "Outsourcing é o futuro da sua empresa, com baixo custo e aumento da produtividade a terceirização dos serviços de TI gera uma economia única e amplia as áreas de atendimento e a segurança da sua empresa. Ao criar uma equipe interna de tecnologia terceirizada sua empresa consegue investir em profissionais de ponta, especialistas, aparelhos de último geração realizar treinamentos constantes e atuações de sistema e pessoa, tudo isso sem os encargos trabalhistas. Nós da Single Core somos o futuro da tecnologia sustentável! Feito para você, pensando no futuro!", title: "Outsourcing", icon: <ApartmentOutlinedIcon fontSize="large" />, },
-        { isOpen: false, descricao: "Descrição 2", title: "Gestão de Serviços de TI e Telecom", icon: <PolylineOutlinedIcon fontSize="large" />, },
-        { isOpen: false, descricao: "Com o objetivo de manter sua empresa sempre segura disponibilizamos as soluções mais adequadas em TI para seu tipo de negócio. Com um know-how em TI e Telecom, atuamos em todo o Brasil levando produtividade, baixo custo e segurança a empresas que buscam soluções tecnológicas de ponta, mas não podem contar com um profissional único. Cuidamos da manutenção do seu sistema de TI, Telecom e a infraestrutura tecnológica necessária para oferecer a seus colaboradores e clientes um atendimento personalizado, com segurança de dados e registro hábil de informações.", title: "Eficiência", icon: <EngineeringOutlinedIcon  fontSize="large"/>, },
+        {
+            isOpen: false, descricao: `Desfrute do suporte técnico, assessoria completa, consultoria e controle da sua empresa com baixo custo. Veja algumas das vantagens que podemos oferecer para sua empresa:
+• Aumento da produtividade com Redução de custos;
+• Análises permanentes de contas e contratos;
+• Auditoria de infraestrutura;
+• Aperfeiçoamento e especializações em TI sem custo;
+• Criação de novos projetos e adequações para melhorar suas soluções de atendimento.`, title: "Gestão de Serviços de TI e Telecom", icon: <PolylineOutlinedIcon fontSize="large" />,
+        },
+        { isOpen: false, descricao: "Com o objetivo de manter sua empresa sempre segura disponibilizamos as soluções mais adequadas em TI para seu tipo de negócio. Com um know-how em TI e Telecom, atuamos em todo o Brasil levando produtividade, baixo custo e segurança a empresas que buscam soluções tecnológicas de ponta, mas não podem contar com um profissional único. Cuidamos da manutenção do seu sistema de TI, Telecom e a infraestrutura tecnológica necessária para oferecer a seus colaboradores e clientes um atendimento personalizado, com segurança de dados e registro hábil de informações.", title: "Eficiência", icon: <EngineeringOutlinedIcon fontSize="large" />, },
     ]);
 
     const setIsOpen = (index: number, isOpen: boolean) => {
@@ -16,12 +23,12 @@ const CardSuporte = () => {
                 console.error('Invalid cards state');
                 return prevCards;
             }
-            return prevCards.map((card, i) => 
+            return prevCards.map((card, i) =>
                 (i === index && card) ? { ...card, isOpen } : card
             );
         });
     };
-    
+
     return (
         <div className="flex xl:flex-row flex-col w-4/6 m-auto relative my-3">
             {cards.map((card, index) => (
@@ -38,7 +45,7 @@ const CardSuporte = () => {
                         </div>
                         <h1 className={`${card.isOpen ? "hidden opacity-0" : "block opacity-100 ease-in-out transition-all duration-500"} text-2xl xl:text-3xl font-bold text-white `}>	{card.title}</h1>
                     </div>
-                    <p className={`${card.isOpen ? "block opacity-100 ease-in-out transition-all duration-500" : "hidden opacity-0" } text-white  font-medium`}>{card.descricao}</p>
+                    <p className={`${card.isOpen ? "block opacity-100 ease-in-out transition-all duration-500" : "hidden opacity-0"} text-white  font-medium`}>{card.descricao}</p>
                 </article>
             ))}
         </div>

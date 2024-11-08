@@ -5,17 +5,17 @@ const LINKS = [
         external: false
     },
     {
-        href: "/about",
+        href: "#about",
         label: "Sobre",
         external: false
     },
     {
-        href: "/services",
+        href: "#services",
         label: "Serviços",
         external: false
     },
     {
-        href: "/contact",
+        href: "#contact",
         label: "Contato",
         external: false
     },
