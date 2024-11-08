@@ -27,7 +27,7 @@ const CardSuporte = () => {
             {cards.map((card, index) => (
                 <article
                     key={index}
-                    className={`w-1/3 relative py-5 px-9 bg-blue-900 xl:h-96 h-54  w-full xl:my-0 my-0.5 hover:w-full transition-all ease-in-out duration-300 text-center justify-center items-center flex mx-1 ${card.isOpen ? "xl:w-full" : "xl:w-1/3"}
+                    className={`w-1/3 relative py-5 px-9 bg-sc-700 xl:h-96 h-54  w-full xl:my-0 my-0.5 hover:w-full transition-all ease-in-out duration-300 text-center justify-center items-center flex mx-1 ${card.isOpen ? "xl:w-full" : "xl:w-1/3"}
                         }`}
                     onMouseOver={() => setIsOpen(index, true)}
                     onMouseOut={() => setIsOpen(index, false)}
@@ -36,7 +36,7 @@ const CardSuporte = () => {
                         <div className={`${card.isOpen ? "hidden opacity-0" : "block opacity-100 ease-in-out transition-all duration-500"} text-white  text-5xl`}>
                             {card.icon}
                         </div>
-                        <h1 className={`${card.isOpen ? "hidden opacity-0" : "block opacity-100 ease-in-out transition-all duration-500"} text-3xl font-bold text-white `}>	{card.title}</h1>
+                        <h1 className={`${card.isOpen ? "hidden opacity-0" : "block opacity-100 ease-in-out transition-all duration-500"} text-2xl xl:text-3xl font-bold text-white `}>	{card.title}</h1>
                     </div>
                     <p className={`${card.isOpen ? "block opacity-100 ease-in-out transition-all duration-500" : "hidden opacity-0" } text-white  font-medium`}>{card.descricao}</p>
                 </article>
