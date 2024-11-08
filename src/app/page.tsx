@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <section className="flex bg-zinc-800 h-dvh" id="home">
+      <section className="flex bg-slate-300 h-dvh" id="home">
 
       </section>
     </>

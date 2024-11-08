@@ -27,9 +27,9 @@ body {
 
 
 #home {
-  background-image: url("/BG1.png");
+  background-image: url("/mask.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: ;
 } 
 
 #header{
