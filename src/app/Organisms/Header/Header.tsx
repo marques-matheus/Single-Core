@@ -11,7 +11,7 @@ const Header = () => {
         <header className="absolute fixed w-full bg-white bg-opacity-55 items-center z-99" >
             <div id="header" className="flex bg-transparent justify-between lg:justify-around w-full items-center mx-auto">
                 <Image src="/logo1.png" width={200} height={80} alt="logo" />
-                <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-cyan-900 flex items-center"><MenuIcon /></button>
+                <button onBlur={() => setIsOpen(false)} onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-cyan-900 flex items-center"><MenuIcon /></button>
                 <NavMobile isOpen={isOpen} />
                 <NavList />
                 <div className=" flex-col items-center hidden lg:flex">
