@@ -1,10 +1,11 @@
 'use client'
 import Image from "next/image";
 import Header from "./Organisms/Header";
-import Banner from "./Organisms/Header/Banner";
+import Banner from "./Organisms/Banner";
 import ServiceSection from "./Organisms/ServiceSection";
 import CardSuporte from "./Cells/cardSuporte";
 import Heading from "./Atoms/heading";
+import Footer from "./Organisms/Footer";
 export default function Home() {
 
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <CardSuporte />
       </div>
       <ServiceSection />
+      <Footer />
 
     </>
 
