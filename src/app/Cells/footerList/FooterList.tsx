@@ -6,7 +6,7 @@ const FooterList = () => {
 
         <nav className={`flex flex-row justify-between w-full`}>
             <ul className='flex flex-col space-y-2 w-fit'>
-                {LINKS.map((link) => <span className='flex flex-row space-x-2 items-center'><ChevronRight size={15} /> <NavLink footer key={link.href} href={link.href} children={link.label} /></span>)}
+                {LINKS.map((link, index) => <span key={index} className='flex flex-row space-x-2 items-center text-white'><ChevronRight size={15} /> <NavLink footer key={link.href} href={link.href} children={link.label} /></span>)}
             </ul>
            
         </nav>

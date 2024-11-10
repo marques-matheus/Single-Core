@@ -10,7 +10,7 @@ const Header = () => {
     return (
         <header className="absolute fixed w-full bg-white bg-opacity-55 items-center z-99" >
             <div id="header" className="flex bg-transparent justify-between lg:justify-around w-full items-center mx-auto">
-                <Image src="/logo1.png" width={200} height={80} alt="logo" />
+                <Image src="/logo1.png" width={230} height={80} alt="logo" />
                 <button onBlur={() => setIsOpen(false)} onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-sc-700 flex items-center"><MenuIcon /></button>
                 <NavMobile isOpen={isOpen} />
                 <NavList />
