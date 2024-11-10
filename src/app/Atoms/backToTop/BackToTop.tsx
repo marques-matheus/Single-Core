@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ArrowUp } from 'react-feather';
 
 const BackToTop = () => {
     const [showButton, setShowButton] = useState(false);
@@ -24,10 +25,8 @@ const BackToTop = () => {
     };
 
     return (
-        <button onClick={handleClick} className={`fixed hidden lg:block bottom-5 right-5 z-30 cursor-pointer ${showButton ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ease-in-out bg-white border-2 p-1 rounded-full border-sc-600 hover:bg-gray-200`}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-sc-700">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
-            </svg>
+        <button onClick={handleClick} className={`fixed hidden md:block bottom-5 right-5 z-30 cursor-pointer ${showButton ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ease-in-out bg-white border-2 p-1 rounded-full border-sc-600 text-sc-600 hover:bg-gray-200`}>
+            <ArrowUp size={25} />
         </button>
     );
 };
