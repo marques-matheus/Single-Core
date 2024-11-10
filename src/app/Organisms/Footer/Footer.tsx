@@ -35,7 +35,7 @@ const Footer = ({ openModal, setOpenModal }: { openModal: boolean, setOpenModal:
 
             </section>
 
-            <div className='self-center text-white justify-center flex text-sm items-center p-3 w-full'> <h6>&copy; {new Date().getFullYear()} Todos os direitos reservados - Single Core </h6>  </div>
+            <div className='self-center flex flex-col text-white justify-center flex text-sm items-center p-3 w-full'> <h6>&copy; {new Date().getFullYear()} Todos os direitos reservados - Single Core </h6> <span className='ml-2'>Desenvolvido por <a target='_blank' rel='noreferrer' className='font-bold hover:text-gray-300' href="https://www.linkedin.com/in/marques-matheus-silva/">Matheus Marques</a></span> </div>
 
         </footer>
     )

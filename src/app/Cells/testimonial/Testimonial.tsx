@@ -4,7 +4,7 @@ import Heading from "@/app/Atoms/heading";
 
 const Testimonial = () => {
     return (
-        <section className="bg-gradient-to-t from-gray-200 to-white py-16">
+        <section className="bg-gradient-to-t from-gray-200 to-white py-32">
             <div className="container mx-auto">
                 <Heading textSub="Depoimentos" text="Nossos Clientes de sucesso" align="text-center" />
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
