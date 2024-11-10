@@ -19,7 +19,7 @@ export default function Home() {
       <Header />
       <Banner>
         <main className="w-full h-full flex items-center justify-between my-24 lg:my-28">
-          <article className="max-w-xl bg-opacity-75 lg:bg-transparent bg-white p-8 lg:m-auto ">
+          <article className="max-w-xl bg-opacity-55 lg:bg-transparent bg-white p-8 lg:m-auto ">
             <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-sc-700 my-3">Soluções em TI com o melhor custo benefício</h1>
             <p className="lg:text-xl font-light text-sc-700 leading-6">Se você busca por agilidade no atendimento e a melhor prestação de serviço em TI do mercado chegou ao lugar certo. Nós da Single Core temos o que busca com o melhor valor!</p>
             <a href="#about">
@@ -28,9 +28,9 @@ export default function Home() {
               </button>
             </a>
           </article>
-          <article>
-            <Image src="/image.png" className="hidden lg:block" width={600} height={150} alt="logo" />
-          </article>
+
+          <Image src="/image.png" className="hidden md:block w-1/4 xl:w-1/3" width={800} height={150} alt="logo" />
+
         </main>
       </Banner>
       <div className="flex w-full flex-col box-content bg-gradient-to-t from-gray-200 to-white">
