@@ -21,7 +21,7 @@ const Footer = () => {
                     <MapPin size={35} />
                     <h3>Endereço, numero</h3>
                 </article>
-                <button className='p-3 bg-transparent text-white border-2 w-fit flex items-center space-x-2 border-white rounded-md hover:bg-gradient-to-t hover:from-sc-700 hover:to-sc-800'><h4>Entre em contato</h4> <ArrowRightCircle size={15} /></button>
+                <button className='p-3 bg-transparent transition-all duration-700 ease-in-out text-white border-2 w-fit flex items-center space-x-2 border-white rounded-md hover:bg-gradient-to-t hover:from-sc-700 hover:to-sc-800'><h4>Entre em contato</h4> <ArrowRightCircle size={15} /></button>
             </section>
             <section className="flex items-center justify-center md:justify-between w-5/6 h-96 m-auto py-10 md:max-w-6xl">
                 <article className='flex flex-col items-center lg:items-start justify-around max-w-xs space-y-3'>

@@ -34,7 +34,7 @@ const CardSuporte = () => {
             {cards.map((card, index) => (
                 <article
                     key={index}
-                    className={`w-1/3 relative py-5 px-9 bg-sc-700 xl:h-96 h-54  w-full xl:my-0 my-0.5 hover:w-full transition-all ease-in-out duration-700 text-center justify-center items-center flex mx-1 ${card.isOpen ? "xl:w-full" : "xl:w-1/3"}
+                    className={`w-1/3 relative py-5 px-9 bg-gradient-to-t from-sc-700 to-sc-800 xl:h-96 h-54  w-full xl:my-0 my-0.5 hover:w-full transition-all ease-in-out duration-700 text-center justify-center items-center flex mx-1 ${card.isOpen ? "xl:w-full" : "xl:w-1/3"}
                         }`}
                     onMouseOver={() => setIsOpen(index, true)}
                     onMouseOut={() => setIsOpen(index, false)}
