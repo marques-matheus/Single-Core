@@ -36,3 +36,9 @@ body {
   width: 90%;
 }
 
+.about{
+  background-image: url("/BG2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
