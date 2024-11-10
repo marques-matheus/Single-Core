@@ -6,6 +6,8 @@ import ServiceSection from "./Organisms/ServiceSection";
 import CardSuporte from "./Cells/cardSuporte";
 import Heading from "./Atoms/heading";
 import Footer from "./Organisms/Footer";
+import About from "./Organisms/about";
+import Testimonial from "./Cells/testimonial";
 export default function Home() {
 
   return (
@@ -22,11 +24,13 @@ export default function Home() {
           </article>
         </main>
       </Banner>
-      <div className="flex w-full flex-col box-content">
+      <div className="flex w-full flex-col box-content bg-gradient-to-t from-gray-200 to-white">
         <Heading text="Suporte Profissional" align="text-center" />
         <CardSuporte />
       </div>
       <ServiceSection />
+      <About />
+      <Testimonial />
       <Footer />
 
     </>
