@@ -23,6 +23,7 @@ const config: Config = {
         800: '#0E2E5A',
       },
     },
+    
   },
   plugins: [
     require('flowbite/plugin')

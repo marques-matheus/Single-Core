@@ -5,9 +5,9 @@ import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Instagram, ArrowRight
 import FooterList from '@/app/Cells/footerList';
 
 
-const Footer = () => {
+const Footer = ({ openModal, setOpenModal }: { openModal: boolean, setOpenModal: any }) => {
     return (
-        <footer className='flex flex-col w-full h-hit bg-gradient-to-t from-sc-700 to-sc-800 '>
+        <footer className='flex flex-col w-full h-hit bg-gradient-to-t from-sc-700 to-sc-800 ' id='footer'>
 
             <section className="hidden lg:flex items-center justify-evenly w-5/6 m-auto py-10 border-b-2 border-sc-600 lg:max-w-6xl">
                 <article className='flex flex-row p-2 space-x-2 font-bold text-white items-center'>
@@ -18,7 +18,7 @@ const Footer = () => {
                     <Mail size={35} />
                     <h3>faleconosco@singlecore.com.br</h3>
                 </article>
-                <button className='p-3 bg-transparent transition-all duration-700 ease-in-out text-white border-2 w-fit flex items-center space-x-2 border-white rounded-md hover:bg-gradient-to-t hover:from-sc-700 hover:to-sc-800'><h4>Entre em contato</h4> <ArrowRightCircle size={15} /></button>
+                <button onClick={() => setOpenModal(true)} className='p-3 bg-transparent transition-all duration-700 ease-in-out text-white border-2 w-fit flex items-center space-x-2 border-white rounded-md hover:bg-gradient-to-t hover:from-sc-700 hover:to-sc-800'><h4>Entre em contato</h4> <ArrowRightCircle size={15} /></button>
             </section>
             <section className="flex items-center justify-center md:justify-between w-5/6 h-96 m-auto py-10 md:max-w-6xl">
                 <article className='flex flex-col items-center lg:items-start justify-around max-w-xs space-y-3'>

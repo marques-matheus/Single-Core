@@ -1,4 +1,5 @@
 'use client'
+import { useState } from "react";
 import Image from "next/image";
 import Header from "./Organisms/Header";
 import Banner from "./Organisms/Banner";
@@ -9,9 +10,11 @@ import Footer from "./Organisms/Footer";
 import About from "./Organisms/about";
 import Testimonial from "./Cells/testimonial";
 import BackToTop from "./Atoms/backToTop";
+import ModalContact from "./Organisms/Modal/Modal";
 export default function Home() {
-
+  const [openModal, setOpenModal] = useState(false);
   return (
+
     <>
       <Header />
       <Banner>
@@ -38,7 +41,8 @@ export default function Home() {
       <About />
       <Testimonial />
       <BackToTop />
-      <Footer />
+      <ModalContact openModal={openModal} setOpenModal={setOpenModal} />
+      <Footer openModal={openModal} setOpenModal={setOpenModal} />
 
     </>
 

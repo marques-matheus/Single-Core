@@ -15,7 +15,7 @@ const LINKS = [
         external: false
     },
     {
-        href: "#contact",
+        href: "#footer",
         label: "Contato",
         external: false
     },
