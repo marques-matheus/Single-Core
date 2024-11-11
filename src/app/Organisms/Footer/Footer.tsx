@@ -1,7 +1,7 @@
 import Banner from '@/app/Organisms/Banner';
 import Image from 'next/image';
 import Social from '@/app/Atoms/social';
-import { Phone, Mail, MapPin, Facebook, Linkedin, Twitter, Instagram, ArrowRightCircle } from 'react-feather'
+import { Phone, Mail, Facebook, Linkedin, Twitter, Instagram, ArrowRightCircle } from 'react-feather'
 import FooterList from '@/app/Cells/footerList';
 
 

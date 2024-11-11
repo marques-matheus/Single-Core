@@ -8,9 +8,9 @@ import { useState } from "react";
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <header className="absolute fixed w-full bg-white bg-opacity-55 items-center z-99" >
+        <header className="absolute fixed w-full bg-white items-center z-99" >
             <div id="header" className="flex bg-transparent justify-between lg:justify-around w-full items-center mx-auto h-24">
-                <Image src="/logo1.png" width={230} height={80} alt="logo" />
+                <Image src="/logo1.png" className="w-80" width={600} height={100} alt="logo" />
                 <button onBlur={() => setIsOpen(false)} onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-sc-700 flex items-center"><MenuIcon /></button>
                 <NavMobile isOpen={isOpen} />
                 <NavList />

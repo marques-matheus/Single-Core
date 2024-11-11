@@ -42,3 +42,7 @@ body {
   background-size: cover;
 }
 
+#footer{
+  font-family: (var(--font-geist-sans), sans-serif), var(--font-geist-mono);
+  
+}

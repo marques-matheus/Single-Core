@@ -1,5 +1,7 @@
+import { Cpu, } from "react-feather"
 const services = [
   {
+    icon: <Cpu />,
     "titulo": "SUPORTE TÉCNICO DE TI E TELECOM",
     "descricao": "Conte com atendimento humanizado para antecipar e solucionar possíveis problemas tecnológicos da sua empresa. Criamos resultados eficientes em TI para que seu negócio esteja sempre a frente. Oferecemos soluções personalizadas e eficazes."
   },

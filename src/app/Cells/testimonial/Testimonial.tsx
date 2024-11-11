@@ -15,7 +15,7 @@ const Testimonial = () => {
                                 <p className="text-md font-light text-sc-600 mb-2">{testimonial.text}</p>
                                 <div className="flex flex-col justify-between items-start">
                                     <h2 className="text-lg font-semibold text-sc-700 ">{testimonial.name}</h2>
-                                    <span className='font-bold text-sm'>{testimonial.role}</span>
+                                    <span className='font-bold text-md'>{testimonial.role}</span>
                                 </div>
                             </div>
                         </article>
