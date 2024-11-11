@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+const ScMedium = localFont({
+  src: "./fonts/CoreSansD45Medium.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+const ScItalic = localFont({
+  src: "./fonts/CoreSansD45Medium-Italic.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -16,9 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Single Core",
   description: "Single Core",
-  icons: {
-    icon: "/favicon.ico",
-  }
+  
 };
 
 export default function RootLayout({
@@ -29,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ScMedium.variable} ${ScItalic.variable} antialiased`}
       >
         {children}
       </body>
