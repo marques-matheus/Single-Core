@@ -9,8 +9,8 @@ const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <header className="absolute fixed w-full bg-white items-center z-99" >
-            <div id="header" className="flex bg-transparent justify-between lg:justify-around w-full items-center mx-auto h-24">
-                <Image src="/logo1.png" className="w-56" width={600} height={100} alt="logo" />
+            <div id="header" className="flex bg-transparent justify-between lg:justify-around w-full items-center lg:mx-auto h-24">
+                <Image src="/logo1.png"  className="w-56" width={600} height={100} alt="logo" />
                 <button onBlur={() => setIsOpen(false)} onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-sc-700 flex items-center"><MenuIcon /></button>
                 <NavMobile isOpen={isOpen} />
                 <NavList />

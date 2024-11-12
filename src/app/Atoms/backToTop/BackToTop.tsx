@@ -25,7 +25,7 @@ const BackToTop = () => {
     };
 
     return (
-        <button onClick={handleClick} className={`fixed hidden md:block bottom-5 right-5 z-30 cursor-pointer ${showButton ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ease-in-out bg-white border-2 p-1 rounded-full border-sc-600 text-sc-600 hover:bg-gray-200`}>
+        <button onClick={handleClick} className={`fixed block -right-2 bottom-5 lg:right-5 z-30 cursor-pointer ${showButton ? 'opacity-100' : 'opacity-0'} transition-opacity duration-300 ease-in-out bg-white border-r-0 lg:border-r-2 border-2 p-1 rounded-l-full lg:rounded-full border-sc-600 text-sc-600 hover:bg-gray-200`}>
             <ArrowUp size={25} />
         </button>
     );
