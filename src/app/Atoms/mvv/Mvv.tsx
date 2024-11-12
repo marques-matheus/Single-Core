@@ -21,7 +21,7 @@ const texts = [
 
 const Mvv = () => {
     return (
-        <article className="flex flex-col  space-y-5 w-full lg:max-w-xl">
+        <article className="flex flex-col items-center space-y-5 w-full lg:max-w-2xl xl:max-w-xl">
             {texts.map((text, index) => (
                 <div key={index} className="flex flex-col p-3 space-y-2  border-b-2 border-sc-600">
                     <h2 className="text-sc-600 text-xl   font-bold">{text.title}</h2>

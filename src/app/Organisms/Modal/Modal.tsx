@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -10,11 +10,32 @@ export function ModalContact({ openModal, setOpenModal }: { openModal: boolean; 
     const [error, setError] = useState("");
     const form = useRef<HTMLFormElement>(null);
 
-    const sendEmail = (e: any) => {
+    const validateContent = (content: string) => {
+        // Bloquear links e caracteres suspeitos
+        const forbiddenPatterns = [
+            /https?:\/\//gi,     // bloqueia links http ou https
+            /javascript:/gi,     // bloqueia "javascript:" 
+            /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, // bloqueia tags <script>
+            /<[^>]*>/g           // bloqueia tags HTML
+        ];
+        return !forbiddenPatterns.some((pattern) => pattern.test(content)) && content.length <= 1000;
+    };
+
+    const sendEmail = (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true);
         setSuccess("");
         setError("");
+
+        const formElements = form.current?.elements as any;
+        const messageContent = formElements.message.value;
+        const emailContent = formElements.user_email.value;
+
+        if (!validateContent(messageContent)) {
+            setError("Conteúdo inválido ou potencialmente perigoso.");
+            setLoading(false);
+            return;
+        }
 
         emailjs.sendForm("service_r6mglzx", "template_dbz5ysd", form.current ?? "", "j43TJuWrDzZfpHdYd")
             .then(
@@ -26,7 +47,6 @@ export function ModalContact({ openModal, setOpenModal }: { openModal: boolean; 
                     setError("Erro ao enviar email. Tente novamente.");
                     console.error("FAILED...", error.text);
                 }
-
             )
             .finally(() => setLoading(false));
     };
@@ -45,7 +65,15 @@ export function ModalContact({ openModal, setOpenModal }: { openModal: boolean; 
 
                     <div>
                         <Label htmlFor="user_email" value="Seu Email" />
-                        <TextInput id="user_email" name="user_email" type="email" placeholder="email@email.com" required />
+                        <TextInput
+                            id="user_email"
+                            name="user_email"
+                            type="email"
+                            placeholder="email@email.com"
+                            required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            title="Digite um e-mail válido"
+                        />
                     </div>
 
                     <div>
@@ -55,7 +83,13 @@ export function ModalContact({ openModal, setOpenModal }: { openModal: boolean; 
 
                     <div>
                         <Label htmlFor="message" value="Mensagem" />
-                        <Textarea id="message" name="message" placeholder="Mensagem" required />
+                        <Textarea
+                            id="message"
+                            name="message"
+                            placeholder="Mensagem"
+                            required
+                            maxLength={1000}  // Limite de caracteres
+                        />
                     </div>
 
                     <div className="w-full">

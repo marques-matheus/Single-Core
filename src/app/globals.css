@@ -46,3 +46,7 @@ body {
   font-family: (var(--font-geist-sans), sans-serif), var(--font-geist-mono);
   
 }
+
+.react-icons {
+  vertical-align: middle;
+}
