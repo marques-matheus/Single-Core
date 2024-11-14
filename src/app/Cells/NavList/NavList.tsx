@@ -13,7 +13,7 @@ const NavList = ({ scrollToSection }: NavListProps) => {
                     <NavLink
                         key={link.href}
                         children={link.label}
-                        onClick={() => scrollToSection(link.href.slice(1) as 'about' | 'services' | 'footer')}
+                        onClick={() => scrollToSection(link.href.slice(1) as 'home' | 'about' | 'services' | 'footer')}
                     />
                 ))}
             </ul>

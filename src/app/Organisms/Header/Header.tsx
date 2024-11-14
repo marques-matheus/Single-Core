@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
                 <button onBlur={() => setIsOpen(false)} onClick={() => setIsOpen(!isOpen)} className="lg:hidden text-sc-700 flex items-center">
                     <MenuIcon />
                 </button>
-                <NavMobile isOpen={isOpen} />
+                <NavMobile scrollToSection={scrollToSection} isOpen={isOpen} />
                 <NavList scrollToSection={scrollToSection} />
                 <div className="flex-col items-center hidden lg:flex">
                     <a href="mailto:faleconosco@singlecore.com.br" className="flex text-sc-600 font-medium space-x-2 items-center">
