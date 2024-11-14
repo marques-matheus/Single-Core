@@ -29,7 +29,7 @@ export default function Home() {
             </a>
           </article>
 
-          <Image src="/image.png" className="hidden md:block w-1/4 xl:w-1/3" width={800} height={150} alt="logo" />
+          <Image src="/image.png" className="hidden md:block w-1/4 xl:w-1/3" width={800} height={150} alt="imagem mostrando um mulher usando um notebook" />
 
         </main>
       </Banner>
