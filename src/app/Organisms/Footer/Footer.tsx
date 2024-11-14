@@ -3,9 +3,14 @@ import Image from 'next/image';
 import Social from '@/app/Atoms/social';
 import { Phone, Mail, Facebook, Linkedin, Twitter, Instagram, ArrowRightCircle } from 'react-feather'
 import FooterList from '@/app/Cells/footerList';
+import React from 'react';
 
+interface FooterProps {
+    scrollToSection: (section: 'home' | 'about' | 'services' | 'footer') => void;
+    setOpenModal: React.Dispatch<React.SetStateAction<boolean>>
+}
+const Footer: React.FC<FooterProps> = ({ scrollToSection, setOpenModal }: FooterProps,) => {
 
-const Footer = ({ openModal, setOpenModal }: { openModal: boolean, setOpenModal: any }) => {
     return (
         <footer className='flex flex-col w-full h-hit bg-gradient-to-t from-sc-700 to-sc-800 ' id='footer'>
 
@@ -31,7 +36,7 @@ const Footer = ({ openModal, setOpenModal }: { openModal: boolean, setOpenModal:
                         <Social href=''><Instagram size={25} /></Social>
                     </div>
                 </article>
-                <article className=" flex-col items-start justify-around hidden md:flex space-y-3"><FooterList /></article>
+                <article className=" flex-col items-start justify-around hidden md:flex space-y-3"><FooterList scrollToSection={scrollToSection} /></article>
 
             </section>
 

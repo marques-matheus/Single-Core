@@ -4,7 +4,7 @@ import Mvv from "@/app/Atoms/mvv"
 const About = () => {
 
     return (
-        <section className="flex flex-col xl:flex-row items-center  justify-around about space-y-5 px-10 py-32 h-fit bg-white" id="about">
+        <section className="flex flex-col xl:flex-row items-center  justify-around about space-y-5 px-10 py-16 h-fit bg-white" id="about">
             <article className="lg:max-w-2xl p-5 border-b-2 border-sc-600 lg:border-b-0 mb-10 lg:mb-0">
                 <Heading text="Temos uma sólida trajetória no setor de soluções em TI." textSub="Sobre nós" align="text-left" />
                 <p className="text-left font-light text-sm lg:text-lg"><span className="text-sc-400 text-semibold text-2xl lg:text-4xl mr-1">A</span> Single Core foi criada para assessorar, integrar, oferecer alternativas de soluções e prestar serviços personalizados com segurança e qualidade em Tecnologia da Informação e Comunicação (TIC).

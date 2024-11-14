@@ -1,21 +1,16 @@
-import Link from "next/link";
-
-
-/**
- * A convenience component for creating links between pages.
- *
- * @param {{ children: string, href: string }} props
- * @prop {string} children The text to display for the link.
- * @prop {string} href The URL to link to.
- * @returns A Next.js Link component.
- */
-const NavLink = ({ children, href, external, footer }: { children: string, href: string, external?: boolean, footer?: boolean }) => {
+import { ChevronRight } from 'react-feather'
+const NavLink = ({ children, onClick, footer }: { children: string, onClick: () => void, footer?: boolean }) => {
     return (
-        <Link className={`font-normal  uppercase text-sm   transition-all duration-100 transform  w-fit ${footer ? " hover:border-b-0 border-0 text-white hover:text-sc-100" : "hover:border-b-2 text-sc-800 hover:text-sc-400 hover:border-sc-700"}`} href={href} target={external ? "_blank" : "_self"}>
-            {children}
-        </Link>
-    )
-}
+        <button
+            className={`font-normal uppercase text-sm transition-all duration-100 transform hover:border-sc-700  ${footer ? "hover:border-r-4 w-24 border-sc-400" : "hover:border-b-2 w-fit text-sc-800 hover:text-sc-400 "}`}
+            onClick={onClick}
+        >
+            <div className='flex flex-row space-x-2 items-center'>
+                {footer && <ChevronRight size={15} />}
+                {children}
+            </div>
+        </button>
+    );
+};
 
-
-export default NavLink
+export default NavLink;

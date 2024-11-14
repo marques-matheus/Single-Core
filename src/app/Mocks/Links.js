@@ -1,6 +1,6 @@
 const LINKS = [
     {
-        href: "/",
+        href: "#home",
         label: "Início",
         external: false
     },
